@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const windElement = document.querySelector('#wind');
     const weekElement = document.querySelector('#weeks');
     const tempElement = document.querySelector('#temp');
+    const weatherImage = document.querySelector('#weather-img');
 
     searchButton.addEventListener('click', () => {
         const city = searchInput.value.trim();
@@ -55,6 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
         precipitationElement.textContent = `${current.precip_mm || 0}`; 
         humidityElement.textContent = `${current.humidity} %`;
         windElement.textContent = `${current.wind_kph} km/h`;
+        updateWeatherImage(current.condition.text);
+    }
+
+
+    function updateWeatherImage(condition) {
+        let imageSrc = './assets/imgs/storm.png';
+
+        if (condition.includes('Clear')) {
+            imageSrc = './assets/imgs/sun.png';
+        } else if (condition.includes('Cloudy') || condition.includes('Overcast')) {
+            imageSrc = './assets/imgs/cloudy.png';
+        } else if (condition.includes('Snow')) {
+            imageSrc = './assets/imgs/snow.png';
+        } else if (condition.includes('Storm')) {
+            imageSrc = './assets/imgs/storm.png';
+        }
+
+        weatherImage.src = imageSrc;
     }
 
     
