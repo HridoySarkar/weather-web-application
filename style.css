@@ -196,3 +196,26 @@ button {
 .temp{
     font-size: 40px;
 }
+
+  
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+
+    .container{
+        margin: 0px;
+    }
+    .weather-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-data{
+        border-radius: 20px;
+        width: 300px;
+    }
+    .left-data{
+        width: 300px;
+    }
+    
+  }
