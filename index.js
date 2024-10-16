@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('City not found');
             }
             const data = await response.json();
-            console.log('Weather Data:', data);
+            
             updateWeatherData(data);
         } catch (error) {
             alert(error.message);
