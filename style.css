@@ -153,6 +153,7 @@ button {
     width: 260px;
 }
 .right-data{
+    position: relative;
     background-color: #202731;
     border: none;
     border-radius: 0 20px 20px 0;
@@ -162,15 +163,6 @@ button {
     margin-top: 25px;
 }
 
-.date-of-location{
-
-}
-.weeks{
-
-}
-.Location{
-
-}
 
 .dispay_flex{
     display: flex !important;
@@ -196,6 +188,41 @@ button {
 .temp{
     font-size: 40px;
 }
+
+.weeks-data{
+    margin-top: 50px;
+    background: linear-gradient(to bottom, rgba(111, 135, 141, 0.52), rgba(75, 79, 86, 0.73));
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.weeks-img{
+    height: 20px;
+    width: auto;
+}
+
+.col-3-week{
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-day , .week-name{
+    font-size: 12px;
+}
+
+.col-4{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+
+
+
 
   
 
